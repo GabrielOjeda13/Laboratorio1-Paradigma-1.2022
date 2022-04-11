@@ -1,0 +1,39 @@
+#lang racket
+(provide (all-defined-out))
+
+
+(define (game jugadores setCartas jugadas turno estadoJuego)
+  (list jugadores setCartas jugadas turno estadoJuego)
+  )
+
+;Selector : 
+;Dom: Lista x lista
+;Rec: Lista
+(define (getJugadores jugadores)
+  (cadr jugadores)
+  )
+;Selector : 
+;Dom: Lista x lista
+;Rec: Lista
+(define (getsetCartas setCartas)
+  (caddr setCartas)
+  )
+;Selector : 
+;Dom: Lista x lista
+;Rec: Lista
+(define (getJugadas jugadas)
+  (cadddr jugadas)
+  )
+;Selector : 
+;Dom: Lista x lista
+;Rec: Lista
+(define (getTurno turno)
+  (cadddr(cdr turno))
+  )
+;Selector : 
+;Dom: Lista x lista
+;Rec: Lista
+(define (getEstadoJuego estadoJuego)
+  (cadddr(cddr estadoJuego))
+  )
+}
