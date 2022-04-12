@@ -2,27 +2,27 @@
 (provide (all-defined-out))
 
 
-(define (cardsSet element numE mode rndFn)
-  (list jugadores setCartas mode rndFn)
+(define (cardsSet element numE maxC rndFn)
+  (list element numE maxC rndFn)
   )
 
-;Selector : 
+;Selector del element.
 ;Dom: Lista x lista
 ;Rec: Lista
-(define (getJugadores jugadores)
-  (cadr jugadores)
+(define (getElement element)
+  (cadr element)
+  )
+;Selector del numE.
+;Dom: Lista x lista
+;Rec: Lista
+(define (getNumE numE)
+  (caddr numE)
   )
 ;Selector : 
 ;Dom: Lista x lista
 ;Rec: Lista
-(define (getsetCartas setCartas)
-  (caddr setCartas)
-  )
-;Selector : 
-;Dom: Lista x lista
-;Rec: Lista
-(define (getMode mode)
-  (cadddr mode)
+(define (getMaxC maxC)
+  (cadddr maxC)
   )
 ;Selector : 
 ;Dom: Lista x lista
