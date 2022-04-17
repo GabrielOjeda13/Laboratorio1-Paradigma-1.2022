@@ -3,6 +3,8 @@
 (require "cardsSet.rkt")
 ;Hola Mundo.
 
+; ------ FUNCION TDA CARDSSET -------.
+
 ;Funcion dobble: Verifica que en el mazo de cartas se cumplan las condiciones
 ;Dom: cardsSet
 ;Rec: Boolean
@@ -69,6 +71,76 @@
 (define (cardsSet->string cards)
 )
 
+
+
+; ------ FUNCION TDA GAME -------.
+
+;Funcion stackMode: Función que permite retirar y voltear las dos cartas superiores del stack de cartas en el juego y las dispone en el área de juego.
+;Dom: cardsSet
+;Rec: cardsSet
+;Recursion: Natural
+;Ejemplo de uso:
+(define (stackMode cards)
+)
+
+;Funcion register: Función para registrar a un jugador en un juego. Los jugadores tienen un nombre único y no puede exceder la cantidad de jugadores registrados.
+;Dom: user(String) X game
+;Rec: game
+;Recursion: Natural
+;Ejemplo de uso:
+(define (register user game)
+)
+
+
+;Funcion whoseTurnIsIt?: Función que retorna el usuario a quién le corresponde jugar en el turno.
+;Dom: game
+;Rec: string
+;Recursion: Natural
+;Ejemplo de uso:
+(define (whoseTurnIsIt? game)
+)
+
+;Funcion play:  permite realizar una jugada a partir de la acción especificadas por la función currificada action. Las jugadas parten sin una acción especificada,
+;lo que activa internamente el uso de la función stackMode para el trabajo sobre las cartas.
+;Dom: game X action(fn)
+;Rec: game.
+;Recursion: Natural
+;Ejemplo de uso:
+(define (play game action)
+)
+
+
+;Funcion status: Función que retorna el estado actual del juego.
+;Dom: game
+;Rec: string
+;Recursion: Natural
+;Ejemplo de uso:
+(define (status game)
+)
+
+;Funcion score: Función que retorna el puntaje de un jugador a partir de su nombre de usuario.
+;Dom: game
+;Rec: int
+;Recursion: Natural
+;Ejemplo de uso:
+(define (score game)
+)
+
+;Funcion game->string: convierte un juego/partida a una representación basada en strings que posteriormente pueda visualizarse a través de la función display.
+;Dom: game
+;Rec: string
+;Recursion: Natural
+;Ejemplo de uso:
+(define (game->string game)
+)
+
+;Funcion score: Función que retorna el puntaje de un jugador a partir de su nombre de usuario.
+;Dom: game
+;Rec: int
+;Recursion: Natural
+;Ejemplo de uso:
+(define (score game)
+)
 
 
 
