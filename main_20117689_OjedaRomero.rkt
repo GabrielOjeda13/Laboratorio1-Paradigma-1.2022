@@ -34,7 +34,7 @@
 ;Rec: card
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (nthCard card Entero)
+(define (nthCard card entero)
 )
 
 ;Funcion findTotalCards: A partir de una carta de muestra determina la cantidad total de cartas que se deben producir para un conjunto valido
@@ -88,7 +88,7 @@
 ;Rec: game
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (register user game)
+(define (register user gamer)
 )
 
 
@@ -97,7 +97,7 @@
 ;Rec: string
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (whoseTurnIsIt? game)
+(define (whoseTurnIsIt? gamer)
 )
 
 ;Funcion play:  permite realizar una jugada a partir de la acción especificadas por la función currificada action. Las jugadas parten sin una acción especificada,
@@ -115,7 +115,7 @@
 ;Rec: string
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (status game)
+(define (status gamer)
 )
 
 ;Funcion score: Función que retorna el puntaje de un jugador a partir de su nombre de usuario.
@@ -123,7 +123,7 @@
 ;Rec: int
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (score game)
+(define (score gamer)
 )
 
 ;Funcion game->string: convierte un juego/partida a una representación basada en strings que posteriormente pueda visualizarse a través de la función display.
@@ -131,18 +131,36 @@
 ;Rec: string
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (game->string game)
+(define (game->string gamer)
 )
 
-;Funcion score: Función que retorna el puntaje de un jugador a partir de su nombre de usuario.
-;Dom: game
-;Rec: int
+;Funcion addCard:  Función que permite agregar cartas a un set de manera manual procurando verificar que las cartas incorporadas no violan las restricciones de un set válido,
+;aunque incompleto. Por tanto, no pueden ocurrir situaciones como que dos cartas en el set tienen más de una figura en común. Si una violación ocurre, se devuelve el conjunto de entrada.
+;Dom: cardsSet X card
+;Rec: cardsSet
 ;Recursion: Natural
 ;Ejemplo de uso:
-(define (score game)
+(define (addCard cards card)
 )
 
+;Funcion emptyHandsStackMode: Función que permite retirar y voltear la carta en el tope del stack y una de las cartas del usuario seleccionada
+;de manera aleatoria a partir de la función de aleatorización registrada en el juego.
+;Al terminar un turno, si el jugador acierta se ubican en la base del stack, de lo contrario la carta del jugador vuelva a sus cartas y la del stack vuelve a la base de éste.
+;Dom: cardsSet
+;Rec: cardsSet
+;Recursion: Natural
+;Ejemplo de uso:
+(define (empytHandsStackMode cards)
+)
 
+;Funcion myMode:  Crea tu propia modalidad de juego sin romper las reglas generales del juego y sin afectar los dominios y recorridos de las funciones base.
+;En concreto, debe ser tratada igual que la función stackMode y emptyHandsMode.
+;Dom: cardsSet
+;Rec: cardsSet
+;Recursion: Natural
+;Ejemplo de uso:
+(define (myMode cards)
+)
 
 
 
